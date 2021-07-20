@@ -8,25 +8,15 @@ public class CharCount {
     private int[] chars;
 
     /**
-     * Creates a CharCount object and initializes the chars
-     */
-    private CharCount() {
-        this.chars = new int[(int) 'z' + 1];
-    }
-
-    /**
      * Creates a CharCount object and break down the String s into integer array
      *
      * @param s String
      */
     public CharCount(String s) {
-        this();
+        this.chars = new int[(int) 'z' + 1];
 
-        // discard non alphabetic characters
-        String str = s.toLowerCase().replaceAll("[^a-z]*", "");
-
-        for (int i = 0; i < str.length(); i++) {
-            this.chars[(int) str.charAt(i)] = this.chars[(int) str.charAt(i)] + 1;
+        for (int i = 0; i < s.length(); i++) {
+            this.chars[(int) s.charAt(i)] = this.chars[(int) s.charAt(i)] + 1;
         }
     }
 
@@ -39,7 +29,7 @@ public class CharCount {
      */
     public boolean compare(CharCount c) {
         // loop to check every alphabetic character in the array chars of this and c
-        for (int i = (int) 'a'; i < this.chars.length; i++) {
+        for (int i = 0; i < this.chars.length; i++) {
             if (this.chars[i] != c.chars[i]) {
                 return false;
             }
