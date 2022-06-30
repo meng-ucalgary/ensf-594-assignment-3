@@ -8,8 +8,6 @@ Assignment on a linked lists to solve the problem given in the file [Questions.p
 
 2. Run the script [`launch.sh`](launch.sh) or [`launch.cmd`](launch.cmd) to launch the program.
 
-3. Then follow the onscreen instructions.
-
 ## How it works
 
 1. User launches the program
